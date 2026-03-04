@@ -4,7 +4,7 @@ Connect-MgGraph -Scopes "User.Read.All"
 #o
 Connect-MgGraph -Scopes "User.ReadWrite.All"
 
-Update-MgUser -UserId "lmaronas@prestige-auto.com.ar" -OnPremisesImmutableId "/pva9WpQgkCXvfwxHA75FA=="
+Update-MgUser -UserId "user@domain" -OnPremisesImmutableId "/pva9WpQgkCXvfwxHA75FA=="
 
 ###### Si falla, hacerlo desde módulo de AzureAD:
 
