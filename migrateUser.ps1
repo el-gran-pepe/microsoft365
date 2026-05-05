@@ -1,10 +1,10 @@
-Get-ADUser -Identity UsuarioNombre | Select UserPrincipalName, DisplayName, mail, fax, SamAccountName, ObjectGUID, @{name="ImmutableID"; expression={[Convert]::ToBase64String([guid]::New($_.ObjectGUID).ToByteArray())}}
+Get-ADUser -Identity ekreyness | Select UserPrincipalName, DisplayName, mail, fax, SamAccountName, ObjectGUID, @{name="ImmutableID"; expression={[Convert]::ToBase64String([guid]::New($_.ObjectGUID).ToByteArray())}}
  
 Connect-MgGraph -Scopes "User.Read.All"
 #o
 Connect-MgGraph -Scopes "User.ReadWrite.All"
 
-Update-MgUser -UserId "user@domain" -OnPremisesImmutableId "/pva9WpQgkCXvfwxHA75FA=="
+Update-MgUser -UserId "user@domain" -OnPremisesImmutableId "6AesIdrxRUG11YJYlLFUTA=="
 
 ###### Si falla, hacerlo desde módulo de AzureAD:
 
